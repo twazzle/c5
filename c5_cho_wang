@@ -1,0 +1,20 @@
+void setup() {
+  size(255, 255); //size
+}
+
+void draw() {
+  smooth(); //smooth out appearance
+  strokeWeight(4); //makes the points thicker
+  for (int y = 5; y <= height; y += 10) { //intial state is y=5, test is y is less than
+                                         //or equal to height, update is y+=10;
+                                         //if test is true, the pattern will repeat
+                                         //all the way before 255 in increments of 10
+    for (int x = 5; x <= width; x += 10) { //intial state is x=5, test is x is less than
+                                         //or equal to width, update is x+=10
+                                         //if test is true, the pattern will repeat
+                                         //all the way before 255 in increments of 10
+      stroke(x, y, 255-x); //rgb color
+      point(x,y); //the points that you see
+    }
+  }
+}
